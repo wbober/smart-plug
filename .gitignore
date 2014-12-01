@@ -1,2 +1,6 @@
+*.a
+*.map
+*.smart-plug
 *.b#?
 *.s#?
+obj_*/
