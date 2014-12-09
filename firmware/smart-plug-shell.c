@@ -1,10 +1,11 @@
 #include "shell.h"
+#include "shell-settings.h"
 #include "serial-shell.h"
 
 /*---------------------------------------------------------------------------*/
-PROCESS(smart_plug_shell_process, "Smart plug shell");
+PROCESS(sp_shell_process, "Smart plug shell");
 /*---------------------------------------------------------------------------*/
-PROCESS_THREAD(smart_plug_shell_process, ev, data)
+PROCESS_THREAD(sp_shell_process, ev, data)
 {
   PROCESS_BEGIN();
 
@@ -12,6 +13,7 @@ PROCESS_THREAD(smart_plug_shell_process, ev, data)
   shell_blink_init();
   shell_ps_init();
   shell_reboot_init();
+  shell_settings_init();
 
   PROCESS_END();
 }
